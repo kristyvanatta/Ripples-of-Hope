@@ -1,7 +1,8 @@
 const db = require('../config/connection');
 const { User, Story } = require('../models');
 const userData = require('./userData.json');
-const storyData = require('/storyData.json');
+const storyData = require('./storyData.json');
+
 
 db.once("open", async () =>{
     await User.deleteMany({});

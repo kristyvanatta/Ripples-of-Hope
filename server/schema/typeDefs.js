@@ -26,12 +26,15 @@ const typeDefs = gql`
     story(_id: ID!): Story
     stories(userId: ID, name: String ): [Story]
   }
-
+ type Response {
+  user: User
+  story: Story
+ }
   type Mutation {
     addUser(name: String!, email: String!, password: String!): Auth
     updateUser(name: String, email: String, password: String): User
     deleteUser(_id: ID): User
-    addStroy(title: String!, description: String! image: Stirng, userId: userId): Story
+    addStory(title: String!, description: String! image: String, userId: ID): Story
     updateStory(_id: ID!): Story
     deleteStory(_id: ID!):[Story]
     login(email: String!, password: String!): Auth

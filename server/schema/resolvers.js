@@ -82,7 +82,7 @@ const resolvers = {
         },
         
         // Delete a story
-        deletStory: async (parent, args) =>{
+        deleteStory: async (parent, args) =>{
             return await Story.findByIdAndRemove(args.id);
         },
 
