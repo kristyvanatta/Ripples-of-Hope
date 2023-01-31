@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
+import stories from './pages/stories.js';
 
 function App() {
   return (
@@ -17,6 +18,9 @@ function App() {
         >
           Learn React
         </a>
+        <Routes>
+          <Route path='/stories/:id' element={<stories />} />
+        </Routes>
       </header>
     </div>
   );
