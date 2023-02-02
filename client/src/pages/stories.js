@@ -4,7 +4,7 @@ import {queries} from 'queries.js';
 
 export default function stories() {
     const{id} = useParams();
-    const{error, data} = client(queries, {variables:{id}});
+    const{error, storyData} = client(queries, {variables:{id}});
     
     if (error) return <p>There was an error loading the page. Please try again. If there is still a problem please contacts us.</p>;
 
