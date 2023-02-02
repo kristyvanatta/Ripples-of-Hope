@@ -1,6 +1,6 @@
 import React from "react";
 import Login from "../components/login";
-import Nav from "../components/nav";
+import AppNavBar from "../components/nav";
 import Signup from "../components/signup";
 import About from "./about";
 
@@ -28,7 +28,7 @@ function Home() {
             <div style={styles.heading}>Ripples of Hope</div>
             <div style = {styles.navbar}>
                 <Login />
-                <Nav />
+                <AppNavBar />
                 <About />
             </div>
         </div>
