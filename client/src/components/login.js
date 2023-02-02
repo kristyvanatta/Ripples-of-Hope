@@ -11,7 +11,7 @@ function Login(props) {
     const handleFormSubmit = async (event) => {
         event.preventDefault();
         try {
-            const mutationsResponse = await login({
+            const mutationResponse = await login({
                 variables: { email: formState.email, password: formState.pawwroed },
             });
             const token = mutationResponse.data.login.token;
@@ -61,7 +61,7 @@ function Login(props) {
                     </div>
                 ) : null}
                 <div className="flex-row flex-end">
-                    <buttone type="submit">Submit</buttone>
+                    <button type="submit">Submit</button>
                 </div>
             </form>
         </div>
