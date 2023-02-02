@@ -5,7 +5,6 @@ query User($id: ID!) {
     user(_id: $id) {
       email
       name
-      password
     }
   }
 `;
@@ -15,7 +14,6 @@ query GetAllUsers {
     getAllUsers {
       email
       name
-      password
     }
   }
 `;
@@ -43,6 +41,21 @@ query Stories {
       userId {
         email
         name
+      }
+    }
+  }
+`;
+export const QUERY_ME = gql`
+  query me {
+    me {
+      _id
+      name
+      email
+      stories {
+        _id
+        title
+        description
+        image
       }
     }
   }
