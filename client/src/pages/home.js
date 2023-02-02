@@ -1,8 +1,10 @@
 import React from "react";
-import login from "../components/login";
-import nav from "../components/nav";
-import signup from "../components/signup";
-import about from "./about";
+import Login from "../components/login";
+import Nav from "../components/nav";
+import Signup from "../components/signup";
+import About from "./about";
+import Stories from "./stories";
+// import Auth from '../utils/auth';
 
 const styles = {
     card: {
@@ -20,6 +22,13 @@ const styles = {
     navbar: {
       padding: 20,
     },
+    story: {
+        margin: 15,
+        background: "#70B9D0",
+        frontSize: '12pt',
+        color: 'black',
+        padding: '0 15px',
+    },
   };
 
 function Home() {
@@ -27,30 +36,16 @@ function Home() {
         <div style = {styles.card}>
             <div style={styles.heading}>Ripples of Hope</div>
             <div style = {styles.navbar}>
-                <login />
-                <nav />
-                <about />
+                <Login />
+                <Signup />
+                <Nav />
+                <About />
+            </div>
+            <div style = {styles.story}>
+                <Stories />
             </div>
         </div>
     )
-}
-
-// const Home = () => {
-//   return (
-//     <div className="container">
-//       <login />
-//       <nav class="navbar bg-body-tertiary">
-//          <div class="container-fluid">
-//          <span class="navbar-brand mb-0 h1">Navbar</span>
-//          </div>
-//        </nav>
-//       <signup />
-//       <h1>Featured Charity:</h1>
-//       <p>About the charity yada yada yada</p>
-//       <h1>Featured Charity:</h1>
-//       <p>About the charity yada yada yada</p>
-//     </div>
-//   );
-// };
+};
 
 export default Home;
