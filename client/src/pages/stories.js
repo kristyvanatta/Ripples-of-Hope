@@ -1,5 +1,6 @@
 import React from "react";
-import {client} from '../Ripples-of-Hope/client';
+import {useParams} from 'react-router-dom'
+import {client} from '@apollo/client';
 import {queries} from 'queries.js';
 
 const styles = {
