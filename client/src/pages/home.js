@@ -1,8 +1,8 @@
 import React from "react";
-import login from "../components/login";
-import nav from "../components/nav";
-import signup from "../components/signup";
-import about from "./about";
+import Login from "../components/login";
+import Nav from "../components/nav";
+import Signup from "../components/signup";
+import About from "./about";
 
 const styles = {
     card: {
@@ -27,9 +27,9 @@ function Home() {
         <div style = {styles.card}>
             <div style={styles.heading}>Ripples of Hope</div>
             <div style = {styles.navbar}>
-                <login />
-                <nav />
-                <about />
+                <Login />
+                <Nav />
+                <About />
             </div>
         </div>
     )
