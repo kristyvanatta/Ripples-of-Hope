@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from "react";
-import { useParams } from 'react-router-dom'
+import React from "react";
+// import { useParams } from 'react-router-dom'
 import { useQuery } from '@apollo/client';
 import { QUERY_STORIES } from '../utils/queries.js';
 
@@ -52,7 +52,7 @@ function Stories() {
           loading ? (
             <div>loading</div>
           ) : (
-            allStories.map((story) => (<div style = {styles.card}>
+            allStories.map((story) => (<div style = {styles.card} key={story._id}>
               <h1 style={styles.title}>{story.title}</h1>
               <p style={styles.description}>{story.description}</p>
               <div>
