@@ -2,7 +2,7 @@ import React from "react";
 import Login from "../components/login";
 import Nav from "../components/nav";
 import Signup from "../components/signup";
-import About from "./about";
+import About from "./About";
 
 const styles = {
     card: {
