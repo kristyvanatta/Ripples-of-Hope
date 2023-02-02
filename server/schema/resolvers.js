@@ -110,7 +110,7 @@ const resolvers = {
         },
 
         // Update a story
-        updateStory: async (parent, args) => {
+        updateStory: async (parent, args, context) => {
             if(context.user){
             return await Story.findByIdAndUpdate(
                 args.id,
