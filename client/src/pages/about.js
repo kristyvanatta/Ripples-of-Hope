@@ -23,10 +23,10 @@ import Nav from "../components/nav";
 
 function About() {
     return (
-        <div style = {styles.card}>
-            <div style={styles.heading}>Ripples of Hope</div>
+        <div className="card bg-white card-rounded w-50">
+            <div className="card-header bg-dark text-center">Ripples of Hope</div>
             <Nav />
-            <div style = {styles.content}>
+            <div className="card-body m-5">
                 `We are a not-for-profit website where we promote
               charities all around the United States. 100% of donations
               are given to the charities of the donners choosing.
