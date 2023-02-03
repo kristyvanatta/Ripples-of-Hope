@@ -27,7 +27,7 @@ export default function AddStory() {
        }catch(err){
         console.error(err)
        }
-       window.location.replace('/addStory');
+       window.location.replace('/stories');
     }
 
   return (
