@@ -1,25 +1,25 @@
 import React from "react";
 import Nav from "../components/nav";
 
-const styles = {
-    card: {
-      margin: 20,
-      background: '#9DC0CB',
-    },
-    heading: {
-      background: '#2E9CC2',
-      minHeight: 50,
-      lineHeight: 3.5,
-      fontSize: '1.2rem',
-      textAlign: "center",
-      color: 'black',
-      padding: '0 20px',
-    },
-    content: {
-      padding: 20,
-      textAlign: "center",
-    },
-  };
+// const styles = {
+//     card: {
+//       margin: 20,
+//       background: '#9DC0CB',
+//     },
+//     heading: {
+//       background: '#2E9CC2',
+//       minHeight: 50,
+//       lineHeight: 3.5,
+//       fontSize: '1.2rem',
+//       textAlign: "center",
+//       color: 'black',
+//       padding: '0 20px',
+//     },
+//     content: {
+//       padding: 20,
+//       textAlign: "center",
+//     },
+//   };
 
 function About() {
     return (

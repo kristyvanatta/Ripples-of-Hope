@@ -1,10 +1,40 @@
+html {
+  line-height: 1.15;
+  -webkit-text-size-adjust: 100%;
+}
+
 body {
   margin: 0;
+  padding: 20;
+  margin: 20;
+  background: #9DC0CB;
+  text-align: left;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+main {
+  display: block;
+  background: #2E9CC2;
+  line-height: 3.5;
+  font-size: 1.2rem;
+  text-align: center;
+  color: black;
+  padding: 0 20px;
+}
+
+h1 {
+  font-size: 2em;
+  color: black;
+  margin: 0.67em 0;
+}
+
+img {
+  border-style: line;
+  border-color: black;
 }
 
 code {
