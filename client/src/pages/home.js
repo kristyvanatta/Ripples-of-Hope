@@ -16,6 +16,7 @@ const styles = {
       minHeight: 50,
       lineHeight: 3.5,
       fontSize: '1.2rem',
+      textAlign: "center",
       color: 'black',
       padding: '0 20px',
     },
@@ -26,6 +27,7 @@ const styles = {
         margin: 15,
         background: "#70B9D0",
         frontSize: '12pt',
+        textAlign: "center",
         color: 'black',
         padding: '0 15px',
     },
@@ -42,8 +44,9 @@ function Home() {
 
                 <Signup />
                 <Nav />
-
-                <About />
+            </div>
+            <div style = {styles.card}>
+              <About />
             </div>
             <div style = {styles.story}>
                 <Stories />
