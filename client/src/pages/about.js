@@ -1,5 +1,5 @@
 import React from "react";
-import Nav from "../components/nav";
+import AppNavbar from "../components/nav";
 
 const styles = {
     card: {
@@ -23,7 +23,7 @@ function About() {
     return (
         <div style = {styles.card}>
             <div style={styles.heading}>Ripples of Hope</div>
-            <Nav />
+            {/* <AppNavbar /> */}
             <div style = {styles.content}>
                 `We are a not-for-profit website where we promote
               charities all around the United States. 100% of donations

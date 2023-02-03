@@ -13,17 +13,17 @@ export default function AddStory() {
 
         setNewObject({...newObject, [e.target.name]: e.target.value});
     }
-     
+    
     const handleFormSubmit = async (e) => {
         e.preventDefault();
-       try{
+        try{
         const { data } = addStory({
             variables: { ...newObject }
         });
         console.log(data);
-       }catch(err){
+      }catch(err){
         console.error(err)
-       }
+      }
     }
 
   return (

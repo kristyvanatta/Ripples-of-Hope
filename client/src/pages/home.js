@@ -38,10 +38,10 @@ function Home() {
             <div style = {styles.navbar}>
                 <Login />
 
-                <AppNavBar />
+                {/* <AppNavBar /> */}
 
                 <Signup />
-                <Nav />
+                
 
                 <About />
             </div>
