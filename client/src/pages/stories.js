@@ -37,3 +37,10 @@ export default function stories() {
         )}
     </>;
 }
+
+
+<Story to='./(insert story path here)' className = 'btn btn-primary btn-lg
+d-inline ms-auto'>Story</Story>
+
+<Donate to='./(insert donate path here)' className = 'btn btn-primary btn-lg
+d-inline ms-auto'>Donate</Donate>
