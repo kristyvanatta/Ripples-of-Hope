@@ -1,16 +1,17 @@
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import Home from './pages/home';
 import About from './pages/about';
 import Stories from './pages/stories';
 import AppNavbar from './components/nav';
+
 import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from '@apollo/client';
 import {setContext} from '@apollo/client/link/context';
-import './App.css';
+
 import Signup from './components/signup';
 import Login from './components/login';
 
-import AddStory from './components/addStory';
+// import AddStory from './components/addStory';
 
 const httpLink = createHttpLink({
   rui: '/graphql'
@@ -35,32 +36,29 @@ const client = new ApolloClient ({
 function App() {
   return (
     <ApolloProvider client={client}>
-      <Router>
-        <div className="flex-column justify-center align-center min-100-vh bg-primary">
-          <Routes>
-            <Route path='/'
-            element={<Home/>}
-            />
-            <Route path='/about'
-            element={<About/>}
-            />
-            <Route path='/stories'
-            element={<Stories/>}
-            />
-            <Route path='/addStory'
-            element={<AddStory/>}
-            />
-            <Route path='/signup'
-            element={<Signup/>}
-            />
-            <Route path='/login'
-            element={<Login/>}
-            />
-          </Routes>
-        </div>
-      </Router>
-    </ApolloProvider>
-    
+    <Router>
+      <div>
+        <AppNavbar />
+        <Switch>
+          <Route exact path='/'
+          component={Home}
+          />
+          <Route exact path='/about'
+          component={About}
+          />
+          <Route exact path='/stories'
+          component={Stories}
+          />
+          <Route exact path='/signup'
+          component={Signup}
+          />
+          <Route exact path='/login'
+          component={Login}
+          />
+        </Switch>
+      </div>
+    </Router>
+  </ApolloProvider>
   );
 }
 

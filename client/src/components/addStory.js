@@ -17,11 +17,10 @@ export default function AddStory() {
      
     const handleFormSubmit = async (e) => {
         e.preventDefault();
-        console.log(newObject);
+    
        try{
         const { data } = await addStory({
             variables: { ...newObject}
-            // userId: getToken.data.user._id 
         });
         console.log(data);
        }catch(err){
