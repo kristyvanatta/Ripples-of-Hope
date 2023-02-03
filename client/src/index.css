@@ -3,6 +3,12 @@ html {
   -webkit-text-size-adjust: 100%;
 }
 
+header {
+  font-size: 36;
+  color:aliceblue;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
 body {
   margin: 0;
   padding: 20;
@@ -28,6 +34,7 @@ main {
 
 h1 {
   font-size: 2em;
+  background: #70B9D0;
   color: black;
   margin: 0.67em 0;
 }

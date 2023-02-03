@@ -35,8 +35,8 @@ import Stories from "./stories";
 
 function Home() {
     return (
-        <div style = {styles.card}>
-            <div style={styles.heading}>Ripples of Hope</div>
+        <div className="card bg-white card-rounded w-50">
+        <div className="card-header bg-dark text-center">Ripples of Hope</div>
             <div style = {styles.navbar}>
                 <Login />
 
@@ -45,10 +45,10 @@ function Home() {
                 <Signup />
                 <Nav />
             </div>
-            <div style = {styles.card}>
+            <div className="card-body m-5">
               <About />
             </div>
-            <div style = {styles.story}>
+            <div className="card-body m-5">
                 <Stories />
             </div>
         </div>

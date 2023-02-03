@@ -1,5 +1,6 @@
 import React from "react";
 import Nav from "../components/nav";
+import { Link } from 'react-router-dom';
 
 // const styles = {
 //     card: {
@@ -31,8 +32,8 @@ function About() {
               charities all around the United States. 100% of donations
               are given to the charities of the donners choosing.
                 
-              If you have questions, here is our contact info.
-              And if you want to add your charity, sign up here!`
+              If you have questions, <Link to="/contact">here</Link> is our contact info.
+              And if you want to add your charity, <Link to="/signup">sign up here!</Link>`
             </div>
         </div>
     )
