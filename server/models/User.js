@@ -16,6 +16,12 @@ const userSchema = new Schema({
         required: true,
         minlength: 5
       },
+      stories: [
+        {
+          type: Schema.Types.ObjectId,
+          ref: 'Story'
+        }
+      ]
 })
 
 // set up pre-save middleware to create password

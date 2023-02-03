@@ -6,6 +6,7 @@ const typeDefs = gql`
     name: String,
     email: String,
     password: String,
+    story: [Story]
   }
 
   type Auth {
@@ -22,9 +23,10 @@ const typeDefs = gql`
   }
   type Query{
     getAllUsers: [User]
-    user: User
+    user(_id: ID!): User
     story(_id: ID!): Story
     stories(userId: ID, name: String ): [Story]
+    me: User
   }
  type Response {
   user: User
