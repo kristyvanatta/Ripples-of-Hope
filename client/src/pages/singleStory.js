@@ -28,7 +28,7 @@ function singleStory() {
 
   const { loading, data } = useQuery(QUERY_STORY);
 
-  const story = data?.story || [];
+  const story = data?.story(_id) || [];
 
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
