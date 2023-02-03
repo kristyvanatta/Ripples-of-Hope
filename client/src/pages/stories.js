@@ -1,7 +1,8 @@
-import React from "react";
-// import { useParams } from 'react-router-dom'
+import React, { useState } from "react";
 import { useQuery } from '@apollo/client';
 import { QUERY_STORIES } from '../utils/queries.js';
+import Button from 'react-bootstrap/Button';
+import Modal from 'react-bootstrap/Modal';
 
 const styles = {
   card: {
@@ -38,6 +39,12 @@ const styles = {
 //         )}
 //     </>;
 // }
+function Donate() {
+  const [show, setShow] = useState(false);
+  const handleClose = () => setShow(false);
+  const handleShow = () => setShow(true);
+}
+
 function Stories() {
 
   const { loading, data } = useQuery(QUERY_STORIES);
@@ -58,6 +65,8 @@ function Stories() {
               <p style={styles.description}>{story.description}</p>
               <div>
               <img src={story.image} alt="ripples-of-hope" width="800" height="500"></img>
+              <a href="../pages/singleStory.js">Full Story</a>
+              <Button
               </div></div>))
           )
         }
@@ -65,14 +74,4 @@ function Stories() {
     </>
   )
 }
-<<<<<<< HEAD
-
-
-<Story to='./(insert story path here)' className = 'btn btn-primary btn-lg
-d-inline ms-auto'>Story</Story>
-
-<Donate to='./(insert donate path here)' className = 'btn btn-primary btn-lg
-d-inline ms-auto'>Donate</Donate>
-=======
 export default Stories;
->>>>>>> a9fbadbb3d2d3c120a8bc8cebdef80b87f86d98d
