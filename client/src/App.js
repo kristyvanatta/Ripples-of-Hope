@@ -9,7 +9,7 @@ import {setContext} from '@apollo/client/link/context';
 import './App.css';
 import Signup from './components/signup';
 import Login from './components/login';
-
+import AppNavbar from './components/nav';
 import AddStory from './components/addStory';
 
 const httpLink = createHttpLink({
@@ -37,6 +37,7 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <div className="flex-column justify-center align-center min-100-vh bg-primary">
+          <AppNavbar/>
           <Routes>
             <Route path='/'
             element={<Home/>}
@@ -56,7 +57,7 @@ function App() {
             <Route path='/login'
             element={<Login/>}
             />
-          </Routes>
+            </Routes>
         </div>
       </Router>
     </ApolloProvider>
