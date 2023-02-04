@@ -48,13 +48,11 @@ const resolvers = {
     Mutation:{
         //Add a user
         addUser: async(parent, args) => {
-             try {
+             
             const user = await User.create(args);
             const token = signToken(user);
             return { token, user };
-        }catch(err){
-            console.log(err);
-        }
+      
         },
 
         login: async (parent, { email, password }) =>{
@@ -84,12 +82,13 @@ const resolvers = {
         },
        // Add a story
         addStory: async (parent, args, context) => {
+            console.log(context.user);
          if(context.user){
-            const story = Story.create({
+            const story = await Story.create({
                 title: args.title,
                 description: args.description,
                 image: args.image,
-                userId: args.userId,
+                userId: context.user._id,
               });
               await User.findByIdAndUpdate(context.user._id,{
                   $addToSet: {stories: story}

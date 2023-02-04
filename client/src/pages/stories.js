@@ -3,23 +3,24 @@ import React from "react";
 import { useQuery } from '@apollo/client';
 import { QUERY_STORIES } from '../utils/queries.js';
 
-const styles = {
-  card: {
-    margin: 20,
-    background: '#9DC0CB',
-  },
-  title: {
-    background: '#2E9CC2',
-    minHeight: 50,
-    lineHeight: 3.5,
-    fontSize: '1.2rem',
-    color: 'black',
-    padding: '0 20px',
-  },
-  description: {
-    padding: 20,
-  },
-};
+// const styles = {
+//   card: {
+//     margin: 20,
+//     background: '#9DC0CB',
+//   },
+//   title: {
+//     background: '#2E9CC2',
+//     minHeight: 50,
+//     lineHeight: 3.5,
+//     fontSize: '1.2rem',
+//     textAlign: "center",
+//     color: 'black',
+//     padding: '0 20px',
+//   },
+//   description: {
+//     padding: 20,
+//   },
+// };
 
 // export default function Stories() {
 //     const{id} = useParams();
