@@ -32,7 +32,7 @@ export default function AddStory() {
   return (
     <>
     <div className='container'>
-    <div>Add Your Story</div>
+    <div>Your Stories</div>
     <form onSubmit={handleFormSubmit} className="card-body">
   <div className="form-row">
     <label className="form-label" for="brand">Title</label>
