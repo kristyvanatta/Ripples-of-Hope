@@ -79,9 +79,6 @@ mutation DeleteStory($id: ID!) {
       description
       image
       title
-      userId {
-        _id
-      }
     }
   }
 `
