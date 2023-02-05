@@ -31,6 +31,7 @@ export default function AddStory() {
 
   return (
     <>
+    <div className='container'>
     <div>Add Your Story</div>
     <form onSubmit={handleFormSubmit} className="card-body">
   <div className="form-row">
@@ -48,6 +49,9 @@ export default function AddStory() {
 
   <button type="submit" className="btn">Create</button>
 </form>
+</div>
     </>
+
+
   )
 }

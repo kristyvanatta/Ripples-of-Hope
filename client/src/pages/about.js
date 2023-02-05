@@ -34,21 +34,5 @@ function About() {
     )
 }
 
-// const About = () => {
-//     return (
-//         <div className="container">
-//             <header>About Us</header>
-//             <p>
-//                 `We are a not-for-profit website where we promote
-//                 charities all around the United States. 100% of donations
-//                 are given to the charities of the donners choosing.
-                
-//                 If you have questions, here is our contact info.
-//                 And if you want to add your charity, sign up here!`
-//             </p>
-//         </div>
-//     );
-
-// };
 
 export default About;
