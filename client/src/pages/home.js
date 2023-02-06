@@ -14,22 +14,10 @@ const styles = {
 }
 function Home() {
     return (
-        <div className="card bg-white card-rounded w-50">
-        <div className="card-header bg-dark text-center">Ripples of Hope</div>
-            {/* <div style = {styles.navbar}> */}
-                <div>
-                <Login />
-
-                {/* <AppNavBar /> */}
-
-                <Signup />
-
-
-                <About />
-
-                <AppNavBar />
-
-            </div>
+        <div className="container">
+        <h1 className="card-header text-center">Ripples of Hope</h1>
+    
+            
             <div className="card-body m-5">
               <About />
             </div>

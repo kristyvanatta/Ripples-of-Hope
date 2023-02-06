@@ -13,6 +13,7 @@ import Signup from './components/signup';
 import Login from './components/login';
 
 import AddStory from './components/addStory';
+import 'bootstrap/dist/css/bootstrap.css';
 
 const httpLink = createHttpLink({
   rui: '/graphql'
