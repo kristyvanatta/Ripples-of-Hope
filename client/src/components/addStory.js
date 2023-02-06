@@ -41,9 +41,9 @@ export default function AddStory() {
 
   return (
     <>
-      {/* <MyStory /> */}
+      <MyStory />
       <div className='container'>
-        <h1 className='mt-5 mb-5'>Add Your Story</h1>
+        <h2 className='mt-5 mb-5'>Add Your Story</h2>
         <form onSubmit={handleFormSubmit} className="card-body">
           <div className="form-row mb-3">
             <label className="form-label" for="brand">Title</label>

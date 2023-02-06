@@ -20,6 +20,8 @@ const styles = {
 
 function About() {
     return (
+      <div className="container">
+        <h2>About Us</h2>
         <div style = {styles.card}>
             <div style={styles.heading}>Ripples of Hope</div>
             <div style = {styles.content}>
@@ -30,6 +32,7 @@ function About() {
               If you have questions, here is our contact info.
               And if you want to add your charity, sign up here!`
             </div>
+        </div>
         </div>
     )
 }
