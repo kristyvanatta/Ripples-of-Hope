@@ -11,7 +11,7 @@ const AppNavbar = () => {
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
-        <ul className="flex-row">
+        <ul className="navbar-nav ms-auto">
           <li className="mx-1">
             <Link to="/addStory">Your Story</Link>
           </li>
@@ -25,7 +25,7 @@ const AppNavbar = () => {
       );
     } else {
       return (
-        <ul className="flex-row">
+        <ul className="navbar-nav ms-auto">
           <li className="mx-1">
             <Link to="/signup">Signup</Link>
           </li>
@@ -43,7 +43,7 @@ const AppNavbar = () => {
       <Navbar bg="dark" variant="dark">
           <Container>
               <Navbar.Brand href="/">Ripples of Hope</Navbar.Brand>
-              <Nav className="me-auto">
+              <Nav className="navbar-nav ms-auto">
                   <Nav.Link href="/">Home</Nav.Link>
                   <Nav.Link href="/about">About</Nav.Link>
                   <Nav.Link href="/stories">Stories</Nav.Link>

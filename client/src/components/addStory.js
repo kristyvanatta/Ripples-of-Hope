@@ -41,6 +41,7 @@ export default function AddStory() {
 
   return (
     <>
+      {/* <MyStory /> */}
       <div className='container'>
         <h1 className='mt-5 mb-5'>Add Your Story</h1>
         <form onSubmit={handleFormSubmit} className="card-body">
@@ -62,7 +63,7 @@ export default function AddStory() {
         </form>
       </div>
 
-     {/* <MyStory /> */}
+   
     </>
   )
 }
