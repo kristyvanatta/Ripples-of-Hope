@@ -7,12 +7,6 @@ import { ADD_STORY } from '../utils/mutations';
 import MyStory from './myStory';
 
 
-
-
-
-
-
-
 export default function AddStory() {
 
   // const { id } = useParams();
@@ -48,22 +42,23 @@ export default function AddStory() {
   return (
     <>
       <div className='container'>
-        <h1>Add Your Story</h1>
+        <h1 className='mt-5 mb-5'>Add Your Story</h1>
         <form onSubmit={handleFormSubmit} className="card-body">
-          <div className="form-row">
+          <div className="form-row mb-3">
             <label className="form-label" for="brand">Title</label>
             <input name='title' onChange={setSearchParam} className="form-input form-control" />
           </div>
-          <div className="form-row">
+          <div className="form-row mb-3">
             <label className="form-label" for="model">Description</label>
-            <input name='description' onChange={setSearchParam} className="form-input form-control" />
+            <textarea name='description' onChange={setSearchParam} className="textarea form-control" rows="10" />
           </div>
-          <div className="form-row">
+          <div className="form-row mb-3">
             <label className="form-label" for="year">Image</label>
             <input name='image' onChange={setSearchParam} className="form-input form-control" />
           </div>
-
-          <button type="submit" className="btn">Create</button>
+          <div class="mb-5" >
+          <button type="submit" className="btn btn-warning btn-lg">Create</button>
+          </div>
         </form>
       </div>
 

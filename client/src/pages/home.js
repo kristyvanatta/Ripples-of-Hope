@@ -15,9 +15,7 @@ const styles = {
 function Home() {
     return (
         <div className="container">
-        <h1 className="card-header text-center">Ripples of Hope</h1>
-    
-            
+   
             <div className="card-body m-5">
               <About />
             </div>

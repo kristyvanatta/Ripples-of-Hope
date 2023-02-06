@@ -40,7 +40,7 @@ function Stories() {
               <h1 style={styles.title}>{story.title}</h1>
               <p style={styles.description}>{story.description}</p>
               <div>
-              <img src={story.image} alt="ripples-of-hope" width="800" height="500"></img>
+              <img src={story.image} alt="ripples-of-hope" width="100%" height="500"></img>
               </div></div>))
           )
         }
