@@ -1,34 +1,34 @@
 import React, { useState } from "react";
 import { useQuery } from '@apollo/client';
-import { QUERY_STORIES } from '../utils/queries.js';
+import { QUERY_STORY } from '../utils/queries.js';
 import Button from 'react-bootstrap/Button';
 import Modal from 'react-bootstrap/Modal';
 import Form from 'react-bootstrap/Form';
 
-// const styles = {
-//   card: {
-//     margin: 20,
-//     background: '#9DC0CB',
-//   },
-//   title: {
-//     background: '#2E9CC2',
-//     minHeight: 50,
-//     lineHeight: 3.5,
-//     fontSize: '1.2rem',
-//     textAlign: "center",
-//     color: 'black',
-//     padding: '0 20px',
-//   },
-//   description: {
-//     padding: 20,
-//   },
-// };
+const styles = {
+  card: {
+    margin: 20,
+    background: '#9DC0CB',
+  },
+  title: {
+    background: '#2E9CC2',
+    minHeight: 50,
+    lineHeight: 3.5,
+    fontSize: '1.2rem',
+    textAlign: "center",
+    color: 'black',
+    padding: '0 20px',
+  },
+  description: {
+    padding: 20,
+  },
+};
 
-function Stories() {
+function singleStory() {
 
-  const { loading, data } = useQuery(QUERY_STORIES);
+  const { loading, data } = useQuery(QUERY_STORY);
 
-  const allStories = data?.stories || [];
+  const story = data?.story(_id) || [];
 
   const [show, setShow] = useState(false);
   const handleClose = () => setShow(false);
@@ -37,18 +37,16 @@ function Stories() {
   return (
     <>
       <div className="container">
-        <h1>All Stories</h1>
+        <h1>Full Story</h1>
         {
           loading ? (
             <div>loading</div>
           ) : (
-            allStories.map((story) => (<div style = {styles.card} key={story._id}>
+            story.map((story) => (<div style = {styles.card} key={story._id}>
               <h1 style={styles.title}>{story.title}</h1>
               <p style={styles.description}>{story.description}</p>
               <div>
               <img src={story.image} alt="ripples-of-hope" width="800" height="500"></img>
-              
-              <Button variant='primary' onClick="self.location='../pages/singleStory.js'">Full Story</Button>
 
               <Button variant='primary' onClick={handleShow}>Donate</Button>
               
@@ -100,4 +98,4 @@ function Stories() {
     </>
   )
 }
-export default Stories;
+export default singleStory;
