@@ -5,17 +5,23 @@ import { QUERY_STORIES } from '../utils/queries';
 import { useMutation } from '@apollo/client';
 
 export default function DeleteStory({ storyId }) {
-  const navigate = useNavigate();
-
-  const [deleteStory] = useMutation(DELETE_STORY, {
-    variables: { id: storyId },
-    onCompleted: () => navigate('/stories'),
-    refetchQueries: [{ query: QUERY_STORIES }],
-  });
-
+  // const navigate = useNavigate();
+  const [deleteStory, { error }] = useMutation(DELETE_STORY);
+  // const [deleteStory] = useMutation(DELETE_STORY, {
+  //   variables: { id: storyId },
+  //   onCompleted: () => navigate('/stories'),
+  //   refetchQueries: [{ query: QUERY_STORIES }],
+  // });
+const handleClick = async (e) =>{
+try{
+const {data} = await deleteStory({variables:{id:e.target.id}});
+}catch(err){
+  console.log(err);
+}
+}
   return (
     <div className='d-flex mt-5 ms-auto'>
-      <button className='btn btn-danger m-2' onClick={deleteStory}>
+      <button id={storyId} className='btn btn-danger m-2' onClick={handleClick}>
        Delete Story
       </button>
     </div>

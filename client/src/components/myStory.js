@@ -14,6 +14,7 @@ export default function MyStory() {
     const { loading, data } = useQuery(QUERY_ME);
     const userData = data?.me || [];
     
+  
 
   if(loading){
     return <h2>Loading...</h2>
@@ -22,7 +23,7 @@ export default function MyStory() {
 <div>
  
       <div className='container'>
-        <h2>View Your stories!</h2>
+        <h2>View My stories!</h2>
       
       <h4>
         {userData.stories?.length
@@ -32,14 +33,15 @@ export default function MyStory() {
       </div>
       {userData.stories?.map((story) => {
         return (
-      <div key={story._id} class="card" style="width: 18rem;">
+      <div key={story._id} class="card">
             <h2 class="card-title">{story.title}</h2>
           <div class="card-body">
               <img src={story.image} class="card-img-top" alt="ripples-of-hope" width="100%" height="500"></img>
           
             <p class="card-text">{story.description}</p>
-            <UpdateStory story={story}/>
-            <DeleteStory />
+
+           <UpdateStory story={story}/>  
+            <DeleteStory storyId={story._id}/>
             
           </div>
       </div>)}
