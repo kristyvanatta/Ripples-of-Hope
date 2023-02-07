@@ -11,7 +11,6 @@ import './App.css';
 import './index.css';
 import Signup from './components/signup';
 import Login from './components/login';
-import AppNavbar from './components/nav';
 import AddStory from './components/addStory';
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -68,7 +67,7 @@ function App() {
   </ApolloProvider>
 
 
-    </ApolloProvider>
+    
     
 
   );

@@ -12,13 +12,9 @@ function About() {
 
       <div className="container">
         <h2>About Us</h2>
-
-
-
-        <div style = {styles.card}>
-            <div style={styles.heading}>Ripples of Hope</div>
+            <div className = "header">Ripples of Hope</div>
             {/* <AppNavbar /> */}
-            <div style = {styles.content}>
+            <div className = "main">
 
         <div className="card bg-white card-rounded w-50">
             <div className="card-header bg-dark text-center">Ripples of Hope</div>
@@ -32,6 +28,7 @@ function About() {
               If you have questions, <Link to="/contact">here</Link> is our contact info.
               And if you want to add your charity, <Link to="/signup">sign up here!</Link>`
             </div>
+        </div>
         </div>
         </div>
     )
