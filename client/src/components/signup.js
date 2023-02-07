@@ -59,7 +59,7 @@ const Signup = () => {
             <div className="flex-row space-between my-2">
                 <label htmlFor="name">Name:</label>
                 <input
-                placeholder="Last"
+                placeholder="Name"
                 name="name"
                 type="name"
                 id="name"
