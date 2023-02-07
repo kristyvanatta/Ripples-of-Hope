@@ -23,7 +23,7 @@ export default function MyStory() {
 <div>
  
       <div className='container'>
-        <h2>View Your stories!</h2>
+        <h2>View My stories!</h2>
       
       <h4>
         {userData.stories?.length
