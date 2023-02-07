@@ -35,9 +35,6 @@ export default function AddStory() {
         const { data } = addStory({
             variables: { ...newObject }
 
-       try{
-        const { data } = await addStory({
-            variables: { ...newObject}
         });
         console.log(data);
       }catch(err){

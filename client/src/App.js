@@ -11,7 +11,6 @@ import './App.css';
 import './index.css';
 import Signup from './components/signup';
 import Login from './components/login';
-import AppNavbar from './components/nav';
 import AddStory from './components/addStory';
 import 'bootstrap/dist/css/bootstrap.css';
 
@@ -37,7 +36,7 @@ const client = new ApolloClient ({
 
 function App() {
   return (
-    <ApolloProvider client={client}>
+<ApolloProvider client={client}>
 
     <Router>
       <div className="flex-column justify-center align-center min-100-vh bg-primary">
@@ -68,9 +67,8 @@ function App() {
   </ApolloProvider>
 
 
-    </ApolloProvider>
+  
     
-
   );
 }
 
