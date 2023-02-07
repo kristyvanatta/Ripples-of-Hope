@@ -1,19 +1,19 @@
-import React, { useState } from 'react'
+import React, { useState,useParams } from 'react'
 
-import { useMutation } from '@apollo/client';
+import { useMutation, useQuery } from '@apollo/client';
 import { ADD_STORY } from '../utils/mutations';
-
+import { QUERY_ME } from '../utils/queries';
 
 import MyStory from './myStory';
 
 
 export default function AddStory() {
 
-  // const { id } = useParams();
-  // const { loading, data } = useQuery(QUERY_STORY, { variables: { id } });
+
+  const { loading, data } = useQuery(QUERY_ME);
+    const userData = data?.me || [];
 
   const [newObject, setNewObject] = useState({});
-
 
   const [addStory, { error }] = useMutation(ADD_STORY);
 
@@ -26,30 +26,23 @@ export default function AddStory() {
     setNewObject({ ...newObject, [e.target.name]: e.target.value });
   }
 
+  const handleFormSubmit = async (e) => {
+    e.preventDefault();
 
-    const handleFormSubmit = async (e) => {
-        e.preventDefault();
-
-        try{
-        const { data } = addStory({
-            variables: { ...newObject }
-
-       try{
-        const { data } = await addStory({
-            variables: { ...newObject}
-        });
-        console.log(data);
-      }catch(err){
-        console.error(err)
-      }
-       window.location.replace('/stories');
-
-
+    try {
+      const { data } = await addStory({
+        variables: { ...newObject }
+      });
+      console.log(data);
+    } catch (err) {
+      console.error(err)
+    }
+    window.location.replace('/stories');
   }
 
   return (
     <>
-      <MyStory />
+      <MyStory stories={userData.stories}/>
       <div className='container'>
         <h2 className='mt-5 mb-5'>Add Your Story</h2>
         <form onSubmit={handleFormSubmit} className="card-body">
@@ -75,4 +68,5 @@ export default function AddStory() {
     </>
   )
 }
+
 
