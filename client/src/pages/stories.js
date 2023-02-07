@@ -37,7 +37,7 @@ function Stories() {
   return (
     <>
       <div className="container">
-        <h1>All Stories</h1>
+        <h2>All Stories</h2>
         {
           loading ? (
             <div>loading</div>
@@ -47,8 +47,6 @@ function Stories() {
               <p style={styles.description}>{story.description}</p>
               <div>
               <img src={story.image} alt="ripples-of-hope" width="800" height="500"></img>
-              
-              <Button variant='primary' onClick="self.location='../pages/singleStory.js'">Full Story</Button>
 
               <Button variant='primary' onClick={handleShow}>Donate</Button>
               
