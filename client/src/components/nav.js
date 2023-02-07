@@ -8,85 +8,55 @@ import Auth from '../utils/auth';
 
 const AppNavbar = () => {
 
-    // const [showModal, setShowModal] = useState(false);
 
+  function showNavigation() {
+    if (Auth.loggedIn()) {
+      return (
+        <ul className="navbar-nav ms-auto">
+          <li className="mx-1">
+            <Link to="/addStory">Your Story</Link>
+          </li>
+          <li className="mx-1">
+            {/* this is not using the Link component to logout or user and then refresh the application to the start */}
+            <a href="/" onClick={() => Auth.logout()}>
+              Logout
+            </a>
+          </li>
+        </ul>
+      );
+    } else {
+      return (
+        <ul className="navbar-nav ms-auto">
+          <li className="mx-1">
+            <Link to="/signup">Signup</Link>
+          </li>
+          <li className="mx-1">
+            <Link to="/login">Login</Link>
+          </li>
+        </ul>
+      );
+    }
+  }
 
-    // return (
-    //     <>
-    //     <Navbar bg='dark' variant='dark' expand='lg'>
-    //         <Container fluid>
-    //             <Navbar.Brand as={Link} to='/'>
-    //                 Home
-    //             </Navbar.Brand> 
-    //             <Navbar.Toggle aria-controls='navbar' />
-    //             <Navbar.Collapse id='navbar' >
-    //                 <Nav className='ml-auto'>
-    //                     <Nav.Link as={Link} to='/' >
-    //                     Home
-    //                     </Nav.Link>
-    //                     {Auth.loggedIn() ? (
-    //                         <>
-    //                         <Nav.Link as={Link} to='/stories'>
-    //                             See Stories
-    //                         </Nav.Link>
-    //                         <Nav.Link onClick={Auth.logout}>Logout</Nav.Link>
-    //                         </>
-    //                     ) : (
-    //                         <Nav.Link onClick={() => setShowModal(true)}>Login/Sign Up</Nav.Link>
-    //                     )}
-    //                 </Nav>
-    //             </Navbar.Collapse>
-    //         </Container>
-    //     </Navbar>
-    //     <Modal
-    //     size='lg'
-    //     show={showModal}
-    //     onHide={() => setShowModal(false)}
-    //     aria-labelledby='signup-modal'>
-    //         <Tab.Container defaultActiveKey='login'>
-    //             <Modal.Header closeButton>
-    //                 <Modal.Title id='signup-modal'>
-    //                     <Nav variant='pills'>
-    //                         <Nav.Item>
-    //                             <Nav.Link eventKey='login'>Login</Nav.Link>
-    //                         </Nav.Item>
-    //                         <Nav.Item>
-    //                         <Nav.Link eventKey='signup'>Sign Up</Nav.Link>
-    //                         </Nav.Item>
-    //                     </Nav>
-    //                 </Modal.Title>
-    //             </Modal.Header>
-    //             <Modal.Body>
-    //                 <Tab.Content>
-    //                     <Tab.Pane eventKey='login'>
-    //                         <Login handleModalClose={() => setShowModal(false)} />
-    //                     </Tab.Pane>
-    //                     <Tab.Pane eventKey='signup'>
-    //                         <Signup handleModalClose={() => setShowModal(false)} />
-    //                     </Tab.Pane>
-    //                 </Tab.Content>
-    //             </Modal.Body>
-    //         </Tab.Container>
-    //     </Modal>
-    //     </>
-    // );
-
+  
     return (
-        <>
-        <Navbar bg="dark" variant="dark">
-            <Container>
-                <Navbar.Brand href="/">Ripples of Hope</Navbar.Brand>
-                <Nav className="me-auto">
-                    <Nav.Link href="/">Home</Nav.Link>
-                    <Nav.Link href="/about">About</Nav.Link>
-                    <Nav.Link href="/stories">Stories</Nav.Link>
-                </Nav>
-            </Container>
-        </Navbar>
-        <br />
 
-        </>
-    )
+      <>
+      <Navbar bg="dark" variant="dark">
+          <Container>
+              <Navbar.Brand href="/">Ripples of Hope</Navbar.Brand>
+              <Nav className="navbar-nav ms-auto">
+                  <Nav.Link href="/">Home</Nav.Link>
+                  <Nav.Link href="/about">About</Nav.Link>
+                  <Nav.Link href="/stories">Stories</Nav.Link>
+                  <Nav.Link>{showNavigation()}</Nav.Link>
+              </Nav>
+          </Container>
+      </Navbar>
+      <br />
+      </>
+  )
+
 };
 
 export default AppNavbar

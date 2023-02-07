@@ -10,6 +10,11 @@ import { Link } from 'react-router-dom';
 function About() {
     return (
 
+      <div className="container">
+        <h2>About Us</h2>
+
+
+
         <div style = {styles.card}>
             <div style={styles.heading}>Ripples of Hope</div>
             {/* <AppNavbar /> */}
@@ -28,7 +33,11 @@ function About() {
               And if you want to add your charity, <Link to="/signup">sign up here!</Link>`
             </div>
         </div>
+        </div>
     )
-};
+
+}
+
+
 
 export default About;
