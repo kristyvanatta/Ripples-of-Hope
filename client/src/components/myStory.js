@@ -14,6 +14,7 @@ export default function MyStory() {
     const { loading, data } = useQuery(QUERY_ME);
     const userData = data?.me || [];
     
+  
 
   if(loading){
     return <h2>Loading...</h2>
@@ -38,7 +39,7 @@ export default function MyStory() {
               <img src={story.image} class="card-img-top" alt="ripples-of-hope" width="100%" height="500"></img>
           
             <p class="card-text">{story.description}</p>
-            
+
            <UpdateStory story={story}/>  
             <DeleteStory storyId={story._id}/>
             
