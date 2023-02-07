@@ -15,7 +15,6 @@ export default function AddStory() {
 
   const [newObject, setNewObject] = useState({});
 
-
   const [addStory, { error }] = useMutation(ADD_STORY);
 
 
@@ -26,6 +25,7 @@ export default function AddStory() {
 
     setNewObject({ ...newObject, [e.target.name]: e.target.value });
   }
+
 
 
     const handleFormSubmit = async (e) => {
@@ -73,4 +73,5 @@ export default function AddStory() {
     </>
   )
 }
+
 

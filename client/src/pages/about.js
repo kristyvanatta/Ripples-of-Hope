@@ -10,15 +10,11 @@ import { Link } from 'react-router-dom';
 function About() {
   return (
 
-    <div className="container">
-      <h2>About Us</h2>
-
-
-
-      <div>
-        <div>Ripples of Hope</div>
-        {/* <AppNavbar /> */}
-        <div>
+      <div className="container">
+        <h2>About Us</h2>
+            <div className = "header">Ripples of Hope</div>
+            {/* <AppNavbar /> */}
+            <div className = "main">
 
           <div className="card bg-white card-rounded w-50">
             <div className="card-header bg-dark text-center">Ripples of Hope</div>
@@ -35,8 +31,8 @@ function About() {
           </div>
         </div>
         </div>
-        </div>
-        )
+       
+    )
 
 }
 

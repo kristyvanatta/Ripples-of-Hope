@@ -5,6 +5,7 @@ query User($id: ID!) {
     user(_id: $id) {
       email
       name
+      password
     }
   }
 `;
@@ -14,6 +15,7 @@ query GetAllUsers {
     getAllUsers {
       email
       name
+      password
     }
   }
 `;

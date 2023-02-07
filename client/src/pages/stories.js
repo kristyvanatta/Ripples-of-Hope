@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import { useQuery } from '@apollo/client';
 import { QUERY_STORIES } from '../utils/queries.js';
@@ -38,7 +37,7 @@ function Stories() {
   return (
     <>
       <div className="container">
-        <h2>All Stories</h2>
+        <h1>All Stories</h1>
         {
           loading ? (
             <div>loading</div>
@@ -49,6 +48,8 @@ function Stories() {
               <div>
               <img src={story.image} alt="ripples-of-hope" width="800" height="500"></img>
               
+
+
               <Button variant='primary' onClick={handleShow}>Donate</Button>
               
               <Modal show={show} onHide={handleClose}>
