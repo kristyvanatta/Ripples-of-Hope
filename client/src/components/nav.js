@@ -8,6 +8,7 @@ import Auth from '../utils/auth';
 
 const AppNavbar = () => {
 
+
   function showNavigation() {
     if (Auth.loggedIn()) {
       return (
@@ -37,8 +38,9 @@ const AppNavbar = () => {
     }
   }
 
-
+  
     return (
+
       <>
       <Navbar bg="dark" variant="dark">
           <Container>
@@ -54,6 +56,7 @@ const AppNavbar = () => {
       <br />
       </>
   )
+
 };
 
 export default AppNavbar

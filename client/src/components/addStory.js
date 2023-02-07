@@ -14,6 +14,7 @@ export default function AddStory() {
 
   const [newObject, setNewObject] = useState({});
 
+
   const [addStory, { error }] = useMutation(ADD_STORY);
 
 
@@ -25,18 +26,25 @@ export default function AddStory() {
     setNewObject({ ...newObject, [e.target.name]: e.target.value });
   }
 
-  const handleFormSubmit = async (e) => {
-    e.preventDefault();
 
-    try {
-      const { data } = await addStory({
-        variables: { ...newObject }
-      });
-      console.log(data);
-    } catch (err) {
-      console.error(err)
-    }
-    window.location.replace('/stories');
+    const handleFormSubmit = async (e) => {
+        e.preventDefault();
+
+        try{
+        const { data } = addStory({
+            variables: { ...newObject }
+
+       try{
+        const { data } = await addStory({
+            variables: { ...newObject}
+        });
+        console.log(data);
+      }catch(err){
+        console.error(err)
+      }
+       window.location.replace('/stories');
+
+
   }
 
   return (

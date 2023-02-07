@@ -7,11 +7,7 @@ import Signup from "../components/signup";
 import About from "./about";
 import Stories from "./stories";
 
-const styles = {
-    navbar:{
 
-    }
-}
 function Home() {
     return (
         <div className="container">
