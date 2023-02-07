@@ -32,13 +32,13 @@ export default function MyStory() {
       </div>
       {userData.stories?.map((story) => {
         return (
-      <div key={story._id} class="card" style="width: 18rem;">
+      <div key={story._id} class="card">
             <h2 class="card-title">{story.title}</h2>
           <div class="card-body">
               <img src={story.image} class="card-img-top" alt="ripples-of-hope" width="100%" height="500"></img>
           
             <p class="card-text">{story.description}</p>
-            <UpdateStory story={story}/>
+            <UpdateStory story={story}/> 
             <DeleteStory />
             
           </div>

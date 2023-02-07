@@ -1,16 +1,17 @@
-import React, { useState } from 'react'
+import React, { useState,useParams } from 'react'
 
-import { useMutation } from '@apollo/client';
+import { useMutation, useQuery } from '@apollo/client';
 import { ADD_STORY } from '../utils/mutations';
-
+import { QUERY_ME } from '../utils/queries';
 
 import MyStory from './myStory';
 
 
 export default function AddStory() {
 
-  // const { id } = useParams();
-  // const { loading, data } = useQuery(QUERY_STORY, { variables: { id } });
+
+  const { loading, data } = useQuery(QUERY_ME);
+    const userData = data?.me || [];
 
   const [newObject, setNewObject] = useState({});
 
@@ -49,7 +50,7 @@ export default function AddStory() {
 
   return (
     <>
-      <MyStory />
+      <MyStory stories={userData.stories}/>
       <div className='container'>
         <h2 className='mt-5 mb-5'>Add Your Story</h2>
         <form onSubmit={handleFormSubmit} className="card-body">
