@@ -38,8 +38,9 @@ export default function MyStory() {
               <img src={story.image} class="card-img-top" alt="ripples-of-hope" width="100%" height="500"></img>
           
             <p class="card-text">{story.description}</p>
-            <UpdateStory story={story}/> 
-            <DeleteStory />
+            
+           <UpdateStory story={story}/>  
+            <DeleteStory storyId={story._id}/>
             
           </div>
       </div>)}

@@ -8,25 +8,31 @@ export default function UpdateStory({ story }) {
   const [description, setDescription] = useState(story.description);
   const [image, setImage] = useState(story.image)
 
-  const [updateStory] = useMutation(UPDATE_STORY, {
-    variables: { id: story.id, title, description, image },
-    refetchQueries: [{ query: QUERY_STORY, variables: { id: story.id } }],
-  });
-
-  const onSubmit = (e) => {
+  // const [updateStory] = useMutation(UPDATE_STORY, {
+  //   variables: { id: story.id, title, description, image },
+  //   refetchQueries: [{ query: QUERY_STORY, variables: { id: story.id } }],
+  // });
+  const [updateStory, { error }] = useMutation(UPDATE_STORY);
+  const onSubmit = async (e) => {
     e.preventDefault();
-
-    if (!title || !description || !image) {
-      return alert("Please fill out all fields");
+console.log(e.target.id,title, description, image)
+  
+    try {
+      const { data } = await updateStory({
+        variables: { id: e.target.id, title:title, description:description, image:image }
+      });
+      console.log(data);
+    } catch (err) {
+      console.error(err)
     }
-
-    updateStory(title, description, image);
-  };
+    // window.location.replace('/addStory');
+  }
+  
 
   return (
     <div className="mt-5">
-      <h3>Update Story Details</h3>
-      <form onSubmit={onSubmit}>
+      <h3>Edit This Story</h3>
+      <form id={story._id} onSubmit={onSubmit}>
         <div className="mb-3">
           <label className="form-label">Title</label>
           <input
