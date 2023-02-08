@@ -7,7 +7,24 @@ import { QUERY_ME} from '../utils/queries';
 import { QUERY_STORY} from '../utils/queries';
 import DeleteStory from './deleteStory';
 
-  
+const styles = {
+  card: {
+    margin: 20,
+    background: '#9DC0CB',
+  },
+  title: {
+    background: '#2E9CC2',
+    minHeight: 50,
+    lineHeight: 3.5,
+    fontSize: '1.8rem',
+    textAlign: "center",
+    color: 'black',
+    padding: '0 20px',
+  },
+  description: {
+    padding: 20,
+  },
+};
 
 export default function MyStory() {
 
@@ -20,7 +37,7 @@ export default function MyStory() {
     return <h2>Loading...</h2>
   }
     return (
-<div>
+<div className='p-5'>
  
       <div className='container'>
         <h2>View My stories!</h2>
@@ -33,16 +50,19 @@ export default function MyStory() {
       </div>
       {userData.stories?.map((story) => {
         return (
-      <div key={story._id} class="card">
-            <h2 class="card-title">{story.title}</h2>
+          <div className='row justify-content-around'>
+            <div className='col-7'>
+      <div key={story._id} className="card shadow-lg" style = {styles.card}>
+            <h3 className="card-title" style = {styles.title}>{story.title}</h3>
           <div class="card-body">
-              <img src={story.image} class="card-img-top" alt="ripples-of-hope" width="100%" height="500"></img>
+              <img src={story.image} className="card-img-top" alt="ripples-of-hope" width="100%" height="500"></img>
           
-            <p class="card-text">{story.description}</p>
+            <p className="card-text" style = {styles.description}>{story.description}</p>
 
            <UpdateStory story={story}/>  
             <DeleteStory storyId={story._id}/>
-            
+           </div> 
+          </div>
           </div>
       </div>)}
 
