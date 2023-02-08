@@ -42,15 +42,19 @@ function Stories() {
           loading ? (
             <div>loading</div>
           ) : (
-            allStories.map((story) => (<div style = {styles.card} key={story._id}>
+            allStories.map((story) => (
+              <div className='row justify-content-around'>
+              <div className='col-12'>
+            <div style = {styles.card} key={story._id}>
               <h1 style={styles.title}>{story.title}</h1>
-              <p style={styles.description}>{story.description}</p>
-              <div>
-              <img src={story.image} alt="ripples-of-hope" width="800" height="500"></img>
-              
+              <div className="row">
+              <p className='col-6' style={styles.description}>{story.description}</p>
+            
+              <img className='col-6' src={story.image} alt="ripples-of-hope" width="100%" height="500"></img>
+              </div>
 
-
-              <Button variant='primary' onClick={handleShow}>Donate</Button>
+              <div className="mt-2 ms-auto justify-content-center">
+              <Button className="btn btn-danger m-2" variant='primary' onClick={handleShow}>Donate</Button>
               
               <Modal show={show} onHide={handleClose}>
                 <Modal.Header closeButton>
@@ -93,7 +97,11 @@ function Stories() {
                   <Button variant='primary' onClick={handleClose}>Submit</Button>
                 </Modal.Footer>
               </Modal>
-              </div></div>))
+              </div>
+              </div>
+              </div>
+              </div>
+              ))
           )
         }
       </div>
