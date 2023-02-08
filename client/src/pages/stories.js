@@ -53,7 +53,7 @@ function Stories() {
               <img className='col-6' src={story.image} alt="ripples-of-hope" width="100%" height="500"></img>
               </div>
 
-              <div className="mt-2 ms-auto justify-content-center">
+              <div className="d-flex mt-2 ms-auto justify-content-center shadow-lg">
               <Button className="btn btn-danger m-2" variant='primary' onClick={handleShow}>Donate</Button>
               
               <Modal show={show} onHide={handleClose}>
