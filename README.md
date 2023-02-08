@@ -26,7 +26,7 @@ THEN I am taken to the home page and I can view stories and donate but I can not
 ```
 
 ## Mock-up
-[Home page]()
+![Home page](client\public\home.png)
 
 ## Technologies Used
 * React for the front end
