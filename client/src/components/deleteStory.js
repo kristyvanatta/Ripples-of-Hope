@@ -20,7 +20,7 @@ const {data} = await deleteStory({variables:{id:e.target.id}});
 }
 }
   return (
-    <div className='d-flex mt-5 ms-auto'>
+    <div className='d-flex mt-2 ms-auto justify-content-center'>
       <button id={storyId} className='btn btn-danger m-2' onClick={handleClick}>
        Delete Story
       </button>

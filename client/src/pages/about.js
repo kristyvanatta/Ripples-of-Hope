@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 function About() {
   return (
 
-      <div className="container">
+      <div className="p-5 container">
         <h2>About Us</h2>
             <p className="card-body m-5">
 

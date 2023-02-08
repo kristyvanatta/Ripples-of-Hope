@@ -36,7 +36,7 @@ function Stories() {
 
   return (
     <>
-      <div className="container">
+      <div className="p-5 container">
         <h2>All Stories</h2>
         {
           loading ? (
