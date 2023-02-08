@@ -27,7 +27,7 @@ THEN I am taken to the home page and I can view stories and donate but I can not
 <img width="1134" alt="screeshot" src="https://user-images.githubusercontent.com/110792983/217613115-96e2756a-0731-46d2-82cb-25232fad60ca.png">
 
 ## Mock-up
-[Home page]()
+![Home page](client\public\home.png)
 
 ## Technologies Used
 * React for the front end
