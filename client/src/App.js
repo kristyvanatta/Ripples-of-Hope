@@ -58,6 +58,9 @@ function App() {
           <Route path='/addStory'
           element={<AddStory/>}
           />
+          <Route path='/deleteStory'
+          element={<AddStory/>}
+          />
           <Route path='/signup'
           element={<Signup/>}
           />
