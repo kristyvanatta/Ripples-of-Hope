@@ -22,8 +22,9 @@ THEN I am able to share a story about a charity
 WHEN I click the donate button
 THEN I am taken to the donate form
 WHEN I click logout
-THEN I am taken to the home page and I can view stories and donate but I can not share a story
+THEN I am taken to the home page and I can view stories and donate but I can not share a story, update my story, delete my story.
 ```
+<img width="1134" alt="screeshot" src="https://user-images.githubusercontent.com/110792983/217613115-96e2756a-0731-46d2-82cb-25232fad60ca.png">
 
 ## Mock-up
 [Home page]()
@@ -40,4 +41,4 @@ THEN I am taken to the home page and I can view stories and donate but I can not
 
 ## Links
 [GitHub](https://github.com/kristyvanatta/Ripples-of-Hope)
-[Heroku]()
+[Heroku](https://ripples-of-hope-2.herokuapp.com/)

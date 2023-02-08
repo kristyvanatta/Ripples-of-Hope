@@ -12,10 +12,10 @@ function Home() {
     return (
         <div className="container">
    
-            <div className="card-body m-5">
+            <div className="card-body">
               <About />
             </div>
-            <div className="card-body m-5">
+            <div className="card-body">
                 <Stories />
             </div>
         </div>

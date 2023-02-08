@@ -59,8 +59,8 @@ export const ADD_STORY = gql`
 `;
 
 export const UPDATE_STORY = gql`
-mutation UpdateStory($id: ID!) {
-    updateStory(_id: $id) {
+mutation UpdateStory($id: ID!,$description: String, $image: String, $title: String) {
+    updateStory(_id: $id, description: $description, image: $image, title: $title) {
       _id
       description
       image
@@ -79,6 +79,9 @@ mutation DeleteStory($id: ID!) {
       description
       image
       title
+      userId {
+        _id
+      }
     }
   }
 `

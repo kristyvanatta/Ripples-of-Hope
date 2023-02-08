@@ -103,10 +103,11 @@ const resolvers = {
         // Delete a story
         deleteStory: async (parent, args, context) =>{
             if(context.user){
-            const story = Story.findByIdAndRemove(args.id);
+            const story = Story.findByIdAndRemove(args._id);
             await User.findByIdAndUpdate(context.user._id,{
-                $pull: {stories: story}
-            }) 
+                $pull: {stories: story._id}
+            },
+            {new:true}) 
             return story;
             }
         },
@@ -115,7 +116,7 @@ const resolvers = {
         updateStory: async (parent, args, context) => {
             if(context.user){
             return await Story.findByIdAndUpdate(
-                args.id,
+                args._id,
                 {
                   $set: {
                     title: args.title,

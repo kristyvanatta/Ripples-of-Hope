@@ -36,6 +36,9 @@ body {
   color: var(--dark)
 }
 
+.bg-primary {
+  background-color: transparent !important;
+}
 main {
   display: block;
   background:var(--primary) ;
@@ -61,4 +64,8 @@ img {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+p{
+  font-size: medium;
 }

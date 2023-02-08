@@ -8,58 +8,58 @@ import { ADD_USER } from '../utils/mutations';
 
 const Signup = () => {
   // set initial form state
-  const [userFormData, setUserFormData] = useState({
+    const [userFormData, setUserFormData] = useState({
     name: '',
     email: '',
     password: '',
-  });
+});
   // set state for form validation
-  const [validated] = useState(false);
+    const [validated] = useState(false);
 
-  const [addUser, { error }] = useMutation(ADD_USER);
+    const [addUser, { error }] = useMutation(ADD_USER);
 
-  const handleInputChange = (event) => {
+    const handleInputChange = (event) => {
     const { name, value } = event.target;
     setUserFormData({ ...userFormData, [name]: value });
-  };
+};
 
-  const handleFormSubmit = async (event) => {
+    const handleFormSubmit = async (event) => {
     event.preventDefault();
 
     // check if form has everything (as per react-bootstrap docs)
     const form = event.currentTarget;
     if (form.checkValidity() === false) {
-      event.preventDefault();
-      event.stopPropagation();
+        event.preventDefault();
+        event.stopPropagation();
     }
 
     try {
-      const { data } = await addUser({
+        const { data } = await addUser({
         variables: { ...userFormData },
-      });
-      console.log(data);
-      Auth.login(data.addUser.token);
+    });
+        console.log(data);
+        Auth.login(data.addUser.token);
     } catch (err) {
-      console.error(err);
+        console.error(err);
     }
 
     setUserFormData({
-      name: '',
-      email: '',
-      password: '',
+        name: '',
+        email: '',
+        password: '',
     });
-  };
+};
 
-  return (
+    return (
     <div className="container my-1">
         <Link to="/login">← Go to Login</Link>
         <h2>Signup</h2>
         <form onSubmit={handleFormSubmit}>
-           
+            
             <div className="flex-row space-between my-2">
                 <label htmlFor="name">Name:</label>
                 <input
-                placeholder="Last"
+                placeholder="Name"
                 name="name"
                 type="name"
                 id="name"
