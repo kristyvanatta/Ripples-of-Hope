@@ -22,7 +22,7 @@ THEN I am able to share a story about a charity
 WHEN I click the donate button
 THEN I am taken to the donate form
 WHEN I click logout
-THEN I am taken to the home page and I can view stories and donate but I can not share a story
+THEN I am taken to the home page and I can view stories and donate but I can not share a story, update my story, delete my story.
 ```
 
 ## Mock-up
