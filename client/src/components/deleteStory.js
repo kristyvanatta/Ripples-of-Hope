@@ -18,6 +18,7 @@ const {data} = await deleteStory({variables:{id:e.target.id}});
 }catch(err){
   console.log(err);
 }
+  window.location.replace('/addStory');
 }
   return (
     <div className='d-flex mt-2 ms-auto justify-content-center'>
