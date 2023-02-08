@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { Navbar, Nav, Container, Modal, Tab } from 'react-bootstrap';
-import Signup from './signup';
-import Login from './login';
+
 import Auth from '../utils/auth';
 
 
@@ -49,6 +48,7 @@ const AppNavbar = () => {
                   <Nav.Link href="/">Home</Nav.Link>
                   <Nav.Link href="/about">About</Nav.Link>
                   <Nav.Link href="/stories">Stories</Nav.Link>
+                  <Nav.Link href="/contact">Contact Us</Nav.Link>
                   <Nav.Link>{showNavigation()}</Nav.Link>
               </Nav>
           </Container>

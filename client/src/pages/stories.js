@@ -14,7 +14,7 @@ const styles = {
     background: '#2E9CC2',
     minHeight: 50,
     lineHeight: 3.5,
-    fontSize: '1.2rem',
+    fontSize: '1.8rem',
     textAlign: "center",
     color: 'black',
     padding: '0 20px',
@@ -37,7 +37,7 @@ function Stories() {
   return (
     <>
       <div className="container">
-        <h1>All Stories</h1>
+        <h2>All Stories</h2>
         {
           loading ? (
             <div>loading</div>

@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Home from './pages/home';
 import About from './pages/about';
 import Stories from './pages/stories';
+import Contact from './components/contact';
 import AppNavbar from './components/nav';
 import Footer from './components/Footer';
 import { ApolloClient, ApolloProvider, InMemoryCache, createHttpLink } from '@apollo/client';
@@ -50,6 +51,9 @@ function App() {
           />
           <Route path='/stories'
           element={<Stories/>}
+          />
+          <Route path='/contact'
+          element={<Contact/>}
           />
           <Route path='/addStory'
           element={<AddStory/>}

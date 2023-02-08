@@ -36,6 +36,9 @@ body {
   color: var(--dark)
 }
 
+.bg-primary {
+  background-color: transparent !important;
+}
 main {
   display: block;
   background:var(--primary) ;
